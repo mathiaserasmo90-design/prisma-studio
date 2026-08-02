@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prisma Studio — Juegos para móvil</title>
+<meta name="description" content="Prisma Studio crea juegos para móvil. Descubre Prisma Pop y lo que viene después.">
+<link rel="icon" href="assets/icon.png" type="image/png">
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+<script>
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "surface": "#0b1326",
+          "surface-dim": "#0b1326",
+          "surface-bright": "#31394d",
+          "surface-container-lowest": "#060e20",
+          "surface-container-low": "#131b2e",
+          "surface-container": "#171f33",
+          "surface-container-high": "#222a3d",
+          "on-surface": "#dae2fd",
+          "on-surface-variant": "#ccc3d8",
+          "outline-variant": "#4a4455",
+          "primary": "#d2bbff",
+          "on-primary": "#3f008e",
+          "primary-container": "#7c3aed",
+          "secondary": "#89ceff",
+          "secondary-container": "#00a2e6",
+          "tertiary": "#ffb690",
+          "background": "#0b1326"
+        },
+        borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+        spacing: { lg: "48px", xs: "4px", base: "8px", md: "24px", "margin-mobile": "16px", "margin-desktop": "64px", sm: "12px", xl: "80px", gutter: "20px" },
+        fontFamily: {
+          "body-md": ["Inter"],
+          "label-sm": ["JetBrains Mono"],
+          "headline-lg-mobile": ["Space Grotesk"],
+          "display-lg": ["Space Grotesk"],
+          "headline-lg": ["Space Grotesk"]
+        },
+        fontSize: {
+          "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+          "label-sm": ["12px", { lineHeight: "16px", letterSpacing: "0.05em", fontWeight: "500" }],
+          "headline-lg-mobile": ["24px", { lineHeight: "32px", fontWeight: "700" }],
+          "display-lg": ["40px", { lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700" }],
+          "headline-lg": ["28px", { lineHeight: "36px", fontWeight: "700" }]
+        }
+      }
+    }
+  };
+</script>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-body-md text-body-md bg-surface text-on-surface">
+
+  <!-- ===== NAV ===== -->
+  <header class="bg-surface/70 backdrop-blur-md sticky top-0 z-50 border-b border-white/10">
+    <nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-7xl mx-auto">
+      <a href="#inicio" class="flex items-center gap-sm text-headline-lg-mobile md:text-headline-lg font-headline-lg font-extrabold text-primary tracking-tight">
+        <img src="assets/icon.png" alt="" class="w-8 h-8 rounded-lg" width="32" height="32">
+        Prisma Studio
+      </a>
+
+      <div class="hidden md:flex gap-md items-center">
+        <a class="text-label-sm font-label-sm text-primary border-b-2 border-primary pb-1" href="#inicio">Inicio</a>
+        <a class="text-label-sm font-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#juegos">Juegos</a>
+        <a class="text-label-sm font-label-sm text-on-surface-variant hover:text-primary transition-colors" href="privacidad.html">Política de Privacidad</a>
+      </div>
+
+      <div class="flex items-center gap-sm">
+        <!-- EDITA ESTE ENLACE: pon aquí el link real de la tienda cuando esté publicado -->
+        <a href="#" target="_blank" rel="noopener" class="hidden sm:inline-block bg-primary-container text-white px-6 py-2 rounded-full font-label-sm text-label-sm hover:scale-95 transition-transform duration-200">
+          Descargar
+        </a>
+        <button id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu" class="md:hidden w-10 h-10 flex items-center justify-center rounded-full border border-white/10">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </nav>
+
+    <div id="navMenu" class="md:hidden max-h-0 overflow-hidden transition-all duration-300 border-b border-white/10 bg-surface-container-lowest">
+      <div class="flex flex-col px-margin-mobile py-md gap-md">
+        <a class="text-label-sm font-label-sm text-primary" href="#inicio">Inicio</a>
+        <a class="text-label-sm font-label-sm text-on-surface-variant" href="#juegos">Juegos</a>
+        <a class="text-label-sm font-label-sm text-on-surface-variant" href="privacidad.html">Política de Privacidad</a>
+        <a class="text-label-sm font-label-sm text-primary" href="#" target="_blank" rel="noopener">Descargar</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="hero-gradient min-h-screen">
+
+    <!-- ===== HERO ===== -->
+    <section id="inicio" class="relative px-margin-mobile md:px-margin-desktop py-xl max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-xl overflow-hidden reveal">
+      <div class="flex-1 z-10 text-center md:text-left">
+        <span class="inline-block px-4 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary font-label-sm text-label-sm mb-md uppercase tracking-widest">Destacado</span>
+        <h1 class="font-display-lg text-display-lg mb-md text-white leading-tight">Prisma Pop</h1>
+        <p class="text-on-surface-variant mb-lg max-w-lg mx-auto md:mx-0">
+          Combina colores, hace estallar cadenas de prismas y despeja el tablero antes de que se acabe el tiempo.
+          Rápido de aprender, difícil de soltar.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-md justify-center md:justify-start">
+          <!-- EDITA ESTE ENLACE: pon aquí el link real de la tienda cuando esté publicado -->
+          <a href="#" target="_blank" rel="noopener" class="primary-gradient-btn text-white font-bold px-8 py-4 rounded-xl flex items-center justify-center gap-sm">
+            <span class="material-symbols-outlined">download</span>
+            Descargar en Play Store
+          </a>
+          <a href="#juegos" class="border border-white/20 hover:bg-white/5 transition-all duration-300 text-white font-bold px-8 py-4 rounded-xl flex items-center justify-center gap-sm">
+            <span class="material-symbols-outlined">play_circle</span>
+            Ver más
+          </a>
+        </div>
+      </div>
+
+      <div class="flex-1 relative w-full aspect-video md:aspect-auto md:h-[480px] lg:h-[560px] flex items-center justify-center">
+        <div class="absolute inset-0 bg-primary/20 blur-[100px] rounded-full"></div>
+        <img src="assets/icon.png" alt="Arte promocional de Prisma Pop: bloques de colores estallando en una pantalla futurista" class="relative w-full h-full rounded-[2.5rem] border border-white/10 shadow-2xl object-cover">
+      </div>
+    </section>
+
+    <!-- ===== JUEGOS ===== -->
+    <section class="px-margin-mobile md:px-margin-desktop py-xl max-w-7xl mx-auto reveal" id="juegos">
+      <div class="mb-xl">
+        <h2 class="font-headline-lg text-headline-lg text-white mb-xs">Nuestros Juegos</h2>
+        <p class="text-on-surface-variant">Explora experiencias diseñadas para desafiar tu mente.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-md">
+
+        <!-- Prisma Pop Main Card -->
+        <div class="group relative rounded-3xl overflow-hidden glass-panel border border-white/10 hover:border-primary/50 transition-all duration-300 md:col-span-8">
+          <div class="w-full relative aspect-video md:aspect-auto md:h-[380px]">
+            <img src="assets/hero-prisma-pop.png" alt="Arte promocional de Prisma Pop" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+            <div class="absolute bottom-0 left-0 p-lg w-full">
+              <div class="flex flex-col sm:flex-row justify-between sm:items-end gap-md">
+                <div class="flex items-end gap-md">
+                  <img src="assets/icon.png" alt="" class="w-14 h-14 rounded-2xl border border-white/10 shrink-0" width="56" height="56">
+                  <div>
+                    <span class="text-label-sm font-label-sm text-secondary bg-secondary/10 px-3 py-1 rounded-full mb-sm inline-block">ACCIÓN / PUZZLE</span>
+                    
+                    <p class="text-on-surface-variant max-w-md mt-xs">Niveles cortos, modo Zen sin límite de tiempo y tableros nuevos cada semana.</p>
+                  </div>
+                </div>
+                <!-- EDITA ESTE ENLACE: pon aquí el link real de la tienda cuando esté publicado -->
+                <a href="#" target="_blank" rel="noopener" class="bg-black text-white px-6 py-3 rounded-full border border-white/10 flex items-center gap-xs font-label-sm text-label-sm hover:bg-zinc-900 transition-colors self-start sm:self-auto">
+                  <span class="material-symbols-outlined text-base">shopping_cart</span>
+                  GET IT ON Play Store
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Próximamente -->
+        <div class="md:col-span-4 rounded-3xl overflow-hidden glass-panel border border-dashed border-white/15 flex flex-col items-center justify-center text-center p-lg">
+          <div class="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center mb-md">
+            <span class="material-symbols-outlined text-3xl text-on-surface-variant">hourglass_empty</span>
+          </div>
+          <h4 class="text-white font-bold mb-xs">Próximamente</h4>
+          <p class="text-on-surface-variant text-sm">Estamos trabajando en el siguiente juego.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== POR QUÉ JUGAR ===== -->
+    <section class="px-margin-mobile md:px-margin-desktop py-xl max-w-7xl mx-auto reveal">
+      <div class="mb-xl">
+        <h2 class="font-headline-lg text-headline-lg text-white mb-xs">Por qué jugar Prisma Pop</h2>
+        <p class="text-on-surface-variant">Pensado para partidas cortas, en cualquier momento del día.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+        <div class="glass-panel border border-primary/20 rounded-3xl p-lg flex flex-col items-center text-center group hover:border-primary/50 transition-all duration-300">
+          <div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-md group-hover:scale-110 transition-transform">
+            <span class="material-symbols-outlined text-3xl text-primary">bolt</span>
+          </div>
+          <h3 class="font-headline-lg text-headline-lg-mobile text-white mb-sm">Niveles rápidos</h3>
+          <p class="text-on-surface-variant text-body-md">Partidas de pocos minutos, perfectas para un rato libre.</p>
+        </div>
+
+        <div class="glass-panel border border-secondary/20 rounded-3xl p-lg flex flex-col items-center text-center group hover:border-secondary/50 transition-all duration-300">
+          <div class="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center mb-md group-hover:scale-110 transition-transform">
+            <span class="material-symbols-outlined text-3xl text-secondary">spa</span>
+          </div>
+          <h3 class="font-headline-lg text-headline-lg-mobile text-white mb-sm">Modo Zen</h3>
+          <p class="text-on-surface-variant text-body-md">Sin cronómetro, sin presión. Solo tú, los colores y el tablero.</p>
+        </div>
+
+        <div class="glass-panel border border-tertiary/20 rounded-3xl p-lg flex flex-col items-center text-center group hover:border-tertiary/50 transition-all duration-300">
+          <div class="w-16 h-16 rounded-2xl bg-tertiary/10 flex items-center justify-center mb-md group-hover:scale-110 transition-transform">
+            <span class="material-symbols-outlined text-3xl text-tertiary">grid_view</span>
+          </div>
+          <h3 class="font-headline-lg text-headline-lg-mobile text-white mb-sm">Tableros nuevos</h3>
+          <p class="text-on-surface-variant text-body-md">Cada semana llegan tableros distintos, para que no se sienta repetido.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PRIVACIDAD ===== -->
+    <section class="px-margin-mobile md:px-margin-desktop py-xl max-w-7xl mx-auto reveal" id="privacidad">
+      <div class="glass-panel p-lg rounded-3xl border border-white/5 flex flex-col md:flex-row items-center gap-lg">
+        <div class="bg-primary/10 w-16 h-16 rounded-2xl flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-3xl text-primary">shield</span>
+        </div>
+        <div class="flex-1 text-center md:text-left">
+          <h3 class="font-headline-lg text-headline-lg-mobile text-white mb-xs">Tu privacidad importa</h3>
+          <p class="text-on-surface-variant">Nos tomamos en serio la seguridad de tus datos. Lee nuestra política para entender cómo protegemos tu experiencia en Prisma Studio.</p>
+        </div>
+        <a class="text-primary font-bold hover:underline flex items-center gap-xs shrink-0" href="privacidad.html">
+          Leer Política de Privacidad
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-surface-container-lowest border-t border-outline-variant/20 mt-lg">
+    <div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-md max-w-7xl mx-auto gap-base">
+      <div class="flex flex-col gap-xs items-center md:items-start">
+        <div class="text-headline-lg-mobile font-headline-lg text-primary">Prisma Studio</div>
+        <p class="text-body-md font-body-md text-on-surface-variant opacity-70">© <span id="year"></span> Prisma Studio. Todos los derechos reservados.</p>
+      </div>
+      <a class="text-label-sm font-label-sm text-on-surface-variant hover:text-primary transition-colors underline" href="privacidad.html">Política de Privacidad</a>
+    </div>
+  </footer>
+
+  <!-- Elementos de atmósfera -->
+  <div class="fixed top-0 left-0 w-full h-full pointer-events-none -z-50 overflow-hidden">
+    <div class="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] bg-primary/5 rounded-full blur-[120px]"></div>
+    <div class="absolute bottom-[-10%] left-[-10%] w-[40%] h-[40%] bg-secondary/5 rounded-full blur-[100px]"></div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

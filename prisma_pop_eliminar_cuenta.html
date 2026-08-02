@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prisma Pop — Eliminar mi cuenta</title>
+<link rel="icon" href="assets/icon.png" type="image/png">
+<style>
+  body{font-family:Georgia, 'Times New Roman', serif;max-width:640px;margin:0 auto;padding:32px 20px 60px;line-height:1.65;color:#1a1a1a;background:#fff;}
+  h1{font-size:26px;margin-bottom:4px;}
+  h2{font-size:18px;margin-top:32px;}
+  .updated{color:#666;font-size:13px;margin-bottom:24px;}
+  .option-box{background:#f5f5f7;border-radius:12px;padding:20px 22px;margin:16px 0;}
+  .option-box.recommended{background:#eef8f1;border:1px solid #b6e3c6;}
+  .badge{display:inline-block;background:#2fae63;color:#fff;font-family:Arial,sans-serif;font-size:11px;font-weight:700;
+    padding:3px 10px;border-radius:999px;margin-bottom:10px;}
+  ol{padding-left:22px;}
+  a{color:#1a56db;}
+  label{display:block;font-family:Arial,sans-serif;font-size:13px;font-weight:700;margin:14px 0 4px;}
+  input, textarea{width:100%;box-sizing:border-box;padding:10px 12px;border:1px solid #ccc;border-radius:8px;
+    font-family:Arial,sans-serif;font-size:14px;}
+  .btn{display:inline-block;margin-top:14px;background:#1a56db;color:#fff;padding:11px 22px;border-radius:8px;
+    text-decoration:none;font-family:Arial,sans-serif;font-weight:700;font-size:14px;border:none;cursor:pointer;}
+  .fineprint{font-size:12.5px;color:#666;margin-top:10px;}
+</style>
+</head>
+<body>
+
+<p style="font-family:Arial,sans-serif;font-size:13px;margin-bottom:18px;">
+  <a href="index.html">← Volver a Prisma Studio</a>
+</p>
+
+<h1>Eliminar mi cuenta y datos</h1>
+<p style="font-size:18px;margin-top:-2px;">Prisma Pop</p>
+<p class="updated">Última actualización: 31 de julio de 2026</p>
+
+<p>Puedes eliminar tu cuenta de Prisma Pop y todos los datos asociados (progreso, monedas, niveles, compras registradas) de dos maneras:</p>
+
+<div class="option-box recommended">
+  <span class="badge">MÁS RÁPIDO</span>
+  <h2 style="margin-top:0;">Opción 1 — Directamente desde la app</h2>
+  <ol>
+    <li>Abre Prisma Pop</li>
+    <li>Toca el ícono de ⚙️ (Configuración) en la pantalla de Inicio</li>
+    <li>Baja hasta el botón rojo <strong>"🗑️ Eliminar mi cuenta y datos"</strong></li>
+    <li>Confirma la eliminación</li>
+  </ol>
+  <p class="fineprint">Esto borra tu progreso de forma inmediata, tanto del dispositivo como de nuestros servidores en la nube.</p>
+</div>
+
+<div class="option-box">
+  <h2 style="margin-top:0;">Opción 2 — Solicitud por correo (si no tienes la app instalada)</h2>
+  <p>Envíanos tu solicitud indicando tu identificador de jugador (UID). Puedes encontrarlo en la app en <strong>Perfil → UID</strong> (con un botón para copiarlo), o si no tienes acceso, indícanos el apodo que usabas y la fecha aproximada de tu última partida.</p>
+
+  <label for="uidField">Tu UID (opcional, ayuda a procesar más rápido)</label>
+  <input type="text" id="uidField" placeholder="Ej: zQr2WvgOJXNS6SdUYwd6rcpl35Z2">
+
+  <label for="msgField">Mensaje</label>
+  <textarea id="msgField" rows="4" placeholder="Quiero eliminar mi cuenta y todos mis datos de Prisma Pop."></textarea>
+
+  <button class="btn" onclick="sendRequest()">Enviar solicitud por correo</button>
+  <p class="fineprint">Procesamos las solicitudes por correo dentro de un plazo máximo de 30 días. Recibirás una confirmación a la misma dirección desde la que nos escribas una vez eliminados tus datos.</p>
+</div>
+
+<h2>¿Qué se elimina exactamente?</h2>
+<ul style="font-family:Arial,sans-serif;font-size:14px;">
+  <li>Tu progreso de niveles, estrellas y puntajes</li>
+  <li>Tu saldo de monedas virtuales</li>
+  <li>Tu apodo, avatar y configuración</li>
+  <li>El registro de tu identificador anónimo (UID) y, si vinculaste tu cuenta, la vinculación con Google</li>
+</ul>
+<p style="font-family:Arial,sans-serif;font-size:13px;color:#666;">
+  Nota: si realizaste alguna compra, Google Play conserva su propio registro de esa transacción de forma independiente, conforme a sus políticas — Prisma Pop no controla esos registros.
+</p>
+
+<script>
+function sendRequest(){
+  var uid = document.getElementById('uidField').value.trim();
+  var msg = document.getElementById('msgField').value.trim() || 'Quiero eliminar mi cuenta y todos mis datos de Prisma Pop.';
+  var body = msg + (uid ? ('\n\nMi UID: ' + uid) : '');
+  var mailto = 'mailto:mavexsoporte@gmail.com?subject=' + encodeURIComponent('Solicitud de eliminación de cuenta - Prisma Pop') + '&body=' + encodeURIComponent(body);
+  window.location.href = mailto;
+}
+</script>
+
+</body>
+</html>

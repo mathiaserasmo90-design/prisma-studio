@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidad — Prisma Studio</title>
+<meta name="description" content="Política de privacidad de Prisma Studio y sus juegos, incluido Prisma Pop.">
+<link rel="icon" href="assets/icon.png" type="image/png">
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+<script>
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "surface": "#0b1326",
+          "surface-dim": "#0b1326",
+          "surface-container-lowest": "#060e20",
+          "surface-container": "#171f33",
+          "surface-variant": "#2d3449",
+          "on-surface": "#dae2fd",
+          "on-surface-variant": "#ccc3d8",
+          "outline-variant": "#4a4455",
+          "primary": "#d2bbff",
+          "on-primary": "#3f008e",
+          "primary-container": "#7c3aed",
+          "secondary": "#89ceff",
+          "secondary-container": "#00a2e6",
+          "on-secondary-container": "#00344e",
+          "tertiary": "#ffb690",
+          "background": "#0b1326"
+        },
+        borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+        spacing: { lg: "48px", xs: "4px", base: "8px", md: "24px", "margin-mobile": "16px", "margin-desktop": "64px", sm: "12px", xl: "80px", gutter: "20px" },
+        fontFamily: {
+          "body-md": ["Inter"],
+          "label-sm": ["JetBrains Mono"],
+          "headline-lg": ["Space Grotesk"],
+          "display-lg": ["Space Grotesk"]
+        },
+        fontSize: {
+          "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+          "label-sm": ["12px", { lineHeight: "16px", letterSpacing: "0.05em", fontWeight: "500" }],
+          "headline-lg": ["26px", { lineHeight: "34px", fontWeight: "700" }],
+          "display-lg": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "700" }]
+        }
+      }
+    }
+  };
+</script>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-body-md text-body-md bg-surface text-on-surface">
+
+  <!-- ===== NAV ===== -->
+  <header class="bg-surface/70 backdrop-blur-md sticky top-0 z-50 border-b border-white/10">
+    <nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-7xl mx-auto">
+      <a href="index.html#inicio" class="flex items-center gap-sm text-headline-lg-mobile md:text-headline-lg font-headline-lg font-extrabold text-primary tracking-tight">
+        <img src="assets/icon.png" alt="" class="w-8 h-8 rounded-lg" width="32" height="32">
+        Prisma Studio
+      </a>
+
+      <div class="hidden md:flex gap-md items-center">
+        <a class="text-label-sm font-label-sm text-on-surface-variant hover:text-primary transition-colors" href="index.html#inicio">Inicio</a>
+        <a class="text-label-sm font-label-sm text-on-surface-variant hover:text-primary transition-colors" href="index.html#juegos">Juegos</a>
+        <a class="text-label-sm font-label-sm text-primary border-b-2 border-primary pb-1" href="privacidad.html">Política de Privacidad</a>
+      </div>
+
+      <div class="flex items-center gap-sm">
+        <button id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu" class="md:hidden w-10 h-10 flex items-center justify-center rounded-full border border-white/10">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </nav>
+
+    <div id="navMenu" class="md:hidden max-h-0 overflow-hidden transition-all duration-300 border-b border-white/10 bg-surface-container-lowest">
+      <div class="flex flex-col px-margin-mobile py-md gap-md">
+        <a class="text-label-sm font-label-sm text-on-surface-variant" href="index.html#inicio">Inicio</a>
+        <a class="text-label-sm font-label-sm text-on-surface-variant" href="index.html#juegos">Juegos</a>
+        <a class="text-label-sm font-label-sm text-primary" href="privacidad.html">Política de Privacidad</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-margin-mobile md:px-margin-desktop py-xl">
+
+    <!-- Encabezado -->
+    <header class="mb-xl text-center md:text-left reveal">
+      <h1 class="font-display-lg text-display-lg text-primary mb-base">Política de Privacidad</h1>
+      <!-- EDITA ESTA FECHA cada vez que actualices la política -->
+      <p class="font-label-sm text-label-sm text-on-surface-variant tracking-widest uppercase">
+        Última actualización: julio de 2026
+      </p>
+      <div class="h-1 w-24 bg-gradient-to-r from-primary to-secondary mt-md rounded-full mx-auto md:mx-0"></div>
+      <a href="https://docs.google.com/document/d/190OYQRxmoaInDFmHMq8cRpxgpQIo74y7eU9ZfQlnOiM/edit?usp=sharing" target="_blank" rel="noopener" class="inline-flex items-center gap-xs text-secondary font-label-sm text-label-sm mt-md hover:underline">
+        <span class="material-symbols-outlined text-base">description</span>
+        Ver documento completo en Google Docs
+      </a>
+    </header>
+
+    <div class="space-y-lg">
+
+      <!-- Intro -->
+      <section class="glass-panel p-md rounded-xl reveal">
+        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          En Prisma Studio valoramos la privacidad de nuestros usuarios. Esta política describe cómo manejamos tu información
+          personal y técnica al usar nuestros juegos, incluido Prisma Pop. Al usar nuestras aplicaciones, aceptas los términos
+          descritos aquí.
+        </p>
+      </section>
+
+      <!-- 1. Información que recopilamos -->
+      <section class="space-y-md reveal" id="informacion">
+        <div class="flex items-center gap-base">
+          <span class="material-symbols-outlined text-secondary">dataset</span>
+          <h2 class="font-headline-lg text-headline-lg text-on-surface">1. Información que recopilamos</h2>
+        </div>
+        <div class="font-body-md text-body-md text-on-surface-variant space-y-base pl-md border-l border-outline-variant/30">
+          <p>Recopilamos ciertos datos automáticamente para asegurar el funcionamiento óptimo de nuestros juegos:</p>
+          <ul class="list-disc list-inside space-y-xs ml-base">
+            <li><span class="text-secondary font-medium">Datos de uso:</span> tiempo de juego, niveles alcanzados y estadísticas de rendimiento.</li>
+            <li><span class="text-secondary font-medium">Identificadores de dispositivo:</span> dirección IP, ID de publicidad (como IDFA o GAID) y modelo del dispositivo.</li>
+            <li><span class="text-secondary font-medium">Información técnica:</span> versión del sistema operativo, resolución de pantalla y datos de fallos (crash logs).</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 2. Cómo utilizamos la información -->
+      <section class="space-y-md reveal" id="uso">
+        <div class="flex items-center gap-base">
+          <span class="material-symbols-outlined text-secondary">psychology</span>
+          <h2 class="font-headline-lg text-headline-lg text-on-surface">2. Cómo utilizamos la información</h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-md">
+          <div class="glass-panel p-md rounded-lg">
+            <h3 class="font-label-sm text-label-sm text-primary mb-base">Mejora del juego</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">Analizamos patrones de juego para ajustar la dificultad, corregir errores técnicos y diseñar nuevas funciones.</p>
+          </div>
+          <div class="glass-panel p-md rounded-lg">
+            <h3 class="font-label-sm text-label-sm text-primary mb-base">Análisis y estabilidad</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">Usamos datos agregados para entender el uso general del juego y detectar errores para corregirlos.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Divulgación de datos -->
+      <section class="space-y-md reveal" id="divulgacion">
+        <div class="flex items-center gap-base">
+          <span class="material-symbols-outlined text-secondary">share</span>
+          <h2 class="font-headline-lg text-headline-lg text-on-surface">3. Divulgación de datos</h2>
+        </div>
+        <div class="font-body-md text-body-md text-on-surface-variant space-y-base pl-md border-l border-outline-variant/30">
+          <p>No vendemos tus datos personales a terceros. Podemos usar proveedores de servicios externos para el funcionamiento del juego, por ejemplo:</p>
+          <!-- EDITA ESTA LISTA: deja solo los servicios que realmente usa tu app -->
+          <div class="flex flex-wrap gap-base mt-md">
+            <span class="bg-surface-variant px-md py-xs rounded-full text-label-sm font-label-sm border border-outline-variant/20">Google Play Services</span>
+            <span class="bg-surface-variant px-md py-xs rounded-full text-label-sm font-label-sm border border-outline-variant/20">Firebase Crashlytics</span>
+          </div>
+          <p class="mt-md text-sm italic">Cada uno de estos proveedores tiene su propia política de privacidad que regula cómo manejan los datos que reciben a través de nuestras aplicaciones.</p>
+        </div>
+      </section>
+
+      <!-- 4. Seguridad y derechos del usuario -->
+      <section class="space-y-md reveal" id="seguridad">
+        <div class="flex items-center gap-base">
+          <span class="material-symbols-outlined text-secondary">verified_user</span>
+          <h2 class="font-headline-lg text-headline-lg text-on-surface">4. Seguridad y derechos del usuario</h2>
+        </div>
+        <div class="glass-panel p-md rounded-xl border-l-4 border-primary">
+          <div class="space-y-md">
+            <p class="font-body-md text-body-md text-on-surface-variant">Implementamos medidas de seguridad técnicas y organizativas para proteger tus datos contra acceso no autorizado, alteración o pérdida.</p>
+            <div class="grid md:grid-cols-3 gap-base">
+              <div class="flex flex-col items-center text-center p-base">
+                <span class="material-symbols-outlined text-primary text-3xl mb-xs">lock_open</span>
+                <p class="text-label-sm font-label-sm">Acceso</p>
+              </div>
+              <div class="flex flex-col items-center text-center p-base">
+                <span class="material-symbols-outlined text-primary text-3xl mb-xs">delete_forever</span>
+                <p class="text-label-sm font-label-sm">Eliminación</p>
+              </div>
+              <div class="flex flex-col items-center text-center p-base">
+                <span class="material-symbols-outlined text-primary text-3xl mb-xs">edit_note</span>
+                <p class="text-label-sm font-label-sm">Rectificación</p>
+              </div>
+            </div>
+            <p class="font-body-md text-body-md text-on-surface-variant">Puedes solicitar una copia de tus datos o la eliminación de tu perfil de jugador en cualquier momento, escribiéndonos por el correo de contacto.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Contacto -->
+    <section class="mt-xl text-center bg-surface-container p-xl rounded-2xl border border-outline-variant/10 reveal">
+      <h3 class="font-headline-lg text-headline-lg text-primary mb-md">¿Tienes dudas?</h3>
+      <p class="font-body-md text-body-md text-on-surface-variant mb-md">Si necesitas más información sobre esta política, escríbenos.</p>
+      <!-- EDITA ESTE CORREO por el correo de contacto real de Prisma Studio -->
+      <a class="inline-flex items-center gap-base bg-secondary-container text-on-secondary-container px-xl py-md rounded-full font-label-sm text-label-sm font-bold hover:brightness-110 transition-all" href="mailto:mavexsoporte@gmail.com">
+        <span class="material-symbols-outlined">mail</span>
+        CONTACTAR SOPORTE
+      </a>
+    </section>
+
+    <!-- Eliminación de cuenta -->
+    <section class="mt-xl space-y-md reveal" id="eliminacion-cuenta">
+      <div class="flex items-center gap-base">
+        <span class="material-symbols-outlined text-secondary">delete_forever</span>
+        <h2 class="font-headline-lg text-headline-lg text-on-surface">Eliminación de cuenta</h2>
+      </div>
+      <div class="glass-panel p-md rounded-xl border-l-4 border-primary">
+        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Puedes solicitar la eliminación de tu cuenta de Prisma Pop y de todos los datos asociados (progreso, monedas,
+          niveles y compras registradas) en cualquier momento, ya sea directamente desde la app o mediante una solicitud
+          por correo electrónico. Toda la información sobre este proceso está disponible en nuestra página dedicada:
+        </p>
+        <a class="inline-flex items-center gap-xs text-primary font-bold hover:underline mt-md" href="prisma_pop_eliminar_cuenta.html">
+          Ir a Eliminar mi cuenta y datos
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-surface-container-lowest border-t border-outline-variant/20 mt-lg">
+    <div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-md max-w-7xl mx-auto gap-base">
+      <div class="flex flex-col gap-xs items-center md:items-start">
+        <div class="text-headline-lg-mobile font-headline-lg text-primary">Prisma Studio</div>
+        <p class="text-body-md font-body-md text-on-surface-variant opacity-70">© <span id="year"></span> Prisma Studio. Todos los derechos reservados.</p>
+      </div>
+      <a class="text-label-sm font-label-sm text-on-surface-variant hover:text-primary transition-colors underline" href="privacidad.html">Política de Privacidad</a>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
